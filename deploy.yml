@@ -10,10 +10,13 @@ spec:
     rollingupdate:
       maxSurge: 2
       maxUnavailable: 2
+  selector:
+    matchLabels:
+      app: swiggy
   template:
     metadata:
       name: mytemp
-      matchLabels:
+      labels:
         app: swiggy
     spec:
       containers:
